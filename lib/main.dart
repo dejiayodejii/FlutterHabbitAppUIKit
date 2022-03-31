@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:monumental_habit_app/utilities/colors.dart';
 import 'package:monumental_habit_app/views/onboadingScreen/onboardingScreen.dart';
 
 void main() {
@@ -11,14 +13,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Manrope',
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: kSecondaryColor,
+          secondary: kPrimaryColor,
+        ),
+        textSelectionTheme:
+            const TextSelectionThemeData(cursorColor: Colors.black),
+        textTheme: const TextTheme(
+          bodyText2: TextStyle(color: kPrimaryColor),
+        ),
       ),
       home: const OnboardingScreen(),
     );
   }
 }
-

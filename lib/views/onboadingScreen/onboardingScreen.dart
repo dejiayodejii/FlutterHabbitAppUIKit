@@ -1,10 +1,12 @@
 // ignore_for_file: unused_local_variable
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:monumental_habit_app/models/onboardingModel.dart';
 import 'package:monumental_habit_app/utilities/colors.dart';
 import 'package:monumental_habit_app/utilities/widgets/onboardNavBtn.dart';
 import 'package:monumental_habit_app/utilities/widgets/textBtn.dart';
+import 'package:monumental_habit_app/views/authenticationScreen.dart/signup.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -126,23 +128,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                         OnBoardingNavBtn(
                           text: 'next',
-                          press: () {},
+                          press: () {
+                            
+                          },
                         ),
                       ],
                     ),
                   )
                 : MyTextButton(
-                  press: (){},
-                  text: 'Get Started',
-                  textColor: kPrimaryColor,
-                  bgColor: kSecondaryColor,
-                ),
+                    press: () {
+                       Get.to(()=> const SignUpScreen());
+                    },
+                    text: 'Get Started',
+                    textColor: kPrimaryColor,
+                    bgColor: kSecondaryColor,
+                  ),
           ],
         ),
       )),
     );
   }
 }
-
-
-

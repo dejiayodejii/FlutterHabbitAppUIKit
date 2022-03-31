@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../colors.dart';
-
 class OnBoardingNavBtn extends StatelessWidget {
   const OnBoardingNavBtn({
     Key? key,
@@ -21,7 +19,6 @@ class OnBoardingNavBtn extends StatelessWidget {
       child: Text(
         text!,
         style: const TextStyle(
-          color: kPrimaryColor,
           fontSize: 16,
           fontWeight: FontWeight.bold,
         ),
